@@ -12,7 +12,6 @@ http.listen(port, function() {
     console.log('listening on *: ' + port);
 });
 
-
 // setup my socket server
 var io = require('socket.io')(http);
  
@@ -24,3 +23,5 @@ io.on('connection', function(socket) {
        socket.broadcast.emit('move', msg); 
     });
 });     
+
+module.exports = app
