@@ -1,7 +1,8 @@
 {
   "name": "chesstss",
   "version": "1.0.0",
-  "main": "app.js", "type": "commonjs",
+  "main": "app.js",
+  "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +11,8 @@
   "description": "\"# chessTSSAz\"",
   "dependencies": {
     "express": "^4.21.0",
-    "socket.io": "^4.7.5"
-  },
-  "devDependencies": {}
+    "http": "^0.0.1-security",
+    "socket.io": "^4.7.5",
+    "uuid": "^10.0.0"
+  }
 }

@@ -1,16 +1,20 @@
-var express = require('express');
-var app = express();
-app.use(express.static('public')); 
-var http = require('http').Server(app);
-var port = process.env.PORT || 9000;
-module.exports = app
 
-app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/public/default.html');
+import http from 'http';
+
+// Create a server object
+const server = http.createServer((req, res) => {
+	// Set the response header
+	res.writeHead(200, {'Content-Type': 'text/plain'});
+	// Write some text to the response
+	res.end('Welcome to my simple Node.js app!');
 });
 
-http.listen(port, function() {
-    console.log('listening on *: ' + port);
+// Define the port to listen on
+const port = 3000;
+
+// Start the server
+server.listen(port, () => {
+	console.log(`Server is running on http://localhost:${port}`);
 });
 
 // setup my socket server
