@@ -11,6 +11,9 @@ app.get('/', function(req, res) {
 http.listen(port, function() {
     console.log('listening on *: ' + port);
 });
+
+module.exports = app
+
 // setup my socket server
 var io = require('socket.io')(http);
  
