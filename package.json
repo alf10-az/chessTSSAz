@@ -1,15 +1,16 @@
 {
   "name": "chesstss",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "app.js", "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "\"# chessTSSAz\"",
   "dependencies": {
     "express": "^4.21.0",
     "socket.io": "^4.7.5"
-  }
+  },
+  "devDependencies": {}
 }

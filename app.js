@@ -2,7 +2,8 @@ var express = require('express');
 var app = express();
 app.use(express.static('public')); 
 var http = require('http').Server(app);
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 9000;
+module.exports = app
 
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/public/default.html');
@@ -23,5 +24,3 @@ io.on('connection', function(socket) {
        socket.broadcast.emit('move', msg); 
     });
 });     
-
-module.exports = app
